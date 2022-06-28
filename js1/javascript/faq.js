@@ -36,7 +36,8 @@ btn.addEventListener('click', function () {
         sessionStorage.setItem('mode', newMode);
     }
 });
-//fetch y promise
+
+//fetch
 
 const options = {
 	method: 'GET',
@@ -47,30 +48,26 @@ const options = {
 };
 
 
-window.addEventListener("load", ()=> {
-    let ciudad = document.getElementById("location")
-    let clima = document.getElementById("temp")
-    let fecha = document.getElementById("date")
+
+
+
+
+
+
     
-    fetch('https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=-58.381557&lat=-34.603683&units=metric', options)
-	/* .then(response => response.json())
-	.then(response => console.log(response)) */
-    .then(response =>{
-        return response.json()
-    })
-	
-    .then(data => {
-        const {city_name, ob_time, app_temp} = data.data[0];
-        
+let url = "https://www.econdb.com/api/series/Y10YDAR/?format=json";
 
-        fecha.innerHTML = ob_time;
-        ciudad.innerHTML = city_name;
-        clima.innerHTML = app_temp + "Cº";
-    })
+let tasa= document.getElementById("tasaInteres");
 
+fetch(url)
+.then(response => response.json())
+.then(data => {
+    
+
+    tasa.innerHTML = `${data.data.values[327]}` + "%";
+    console.log(data)
 })
+.catch(err=>console.log(err))
 
 
-
-    
 

@@ -17,3 +17,18 @@ body {
 .titulo{
     color: rgb(255, 0, 0);
 }
+.seccion{
+    display: flex;
+    flex-direction: row;
+}
+.agregarPad{
+    padding-left: 50px;
+}
+.fondoGris{
+    background-color: #949398FF;
+    color: #F4DF4EFF;
+}
+.fc{
+    display: flex;
+    flex-direction: column;
+}

@@ -84,5 +84,5 @@ Swal.fire({
     confirmButtonText: 'Ok!'
   })
 
-  //implemento promesas/fetch
+  
 

@@ -29,4 +29,11 @@ body {
     vertical-align: -.125em;
     fill: currentColor;
   }
-  
+.fondoGris{
+    background-color: #949398FF;
+    color: #F4DF4EFF;
+}
+.fc{
+    display: flex;
+    flex-direction: column;
+}

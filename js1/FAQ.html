@@ -11,25 +11,90 @@
     <link rel="stylesheet" href="./fomr.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="fondoHeader">
-            <h1 class="col-md-12 titulo">
-                <p>EasyCréditos</p>
-            </h1>
-        </div>
+<body class="container fc">
 
-        <h2>Sobre nosotros</h2>
-        <div id="main">
-            <p>Somos una empresa ubicada en <span id="location"></span></p>
-            <p>Fecha local: <span id="date"></span></p>
-            <p>Temperatura local: <span id="temp"></span></p>
-
-        <p>Cambiar modo</p>
-        <a id="theme-switcher" class="btn"></a>
-        <button id="btn2"></button>
+    <div class="fondoHeader">
+        <h1 class="col-md-12 titulo">
+            <p>EasyCréditos</p>
+        </h1>
     </div>
 
+    <nav class="navbar navbar-expand-lg fondoGris">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./formulario.html">Formulario Email</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./FAQ.html">FAQ/Sobre nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="seccion">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div id="clientCarousel" class="carousel carousel-light slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/istockphoto-1089222846-612x612.jpg" class="d-block w-100" alt="Imagen de stock">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/360_F_314475450_C0J7mo5htaPxpNbhKGOOKx4sIA3dmBYo.jpg" class="d-block w-100"
+                            alt="Imagen de stock">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Business-Meeting-Shaking-Hands-877x432.jpg" class="d-block w-100"
+                            alt="Imagen de stock">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previo</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            >
+        </div>
+
+        <div class="col-md-4 agregarPad">
+            <h2>Sobre nosotros</h2>
+            <div id="main">
+                <p>Somos una empresa crediticia vuyo centro de operaciones es la ciudad de Buenos Aires, Republica
+                    Argentina</p>
+                <p>Tenga en cuenta que la tasa usual de interés que empleamos como ente crediticio es la tasa actual
+                    publicada por el banco central, actualmente del <span id="tasaInteres"></span></p>
+
+
+                <p>Cambiar modo</p>
+                <a id="theme-switcher" class="btn"></a>
+                <button id="btn2"></button>
+            </div>
+        </div>
+    </section>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
@@ -42,18 +107,23 @@
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-primary" href="./index.html">Inicio<svg class="bi" width="24" height="24">
+                <li class="ms-3"><a class="text-primary" href="./index.html">Inicio<svg class="bi" width="24"
+                            height="24">
                             <use xlink:href="#instagram" />
                         </svg></a></li>
-                <li class="ms-3"><a class="text-primary" href="./formulario.html">Contacto<svg class="bi" width="24" height="24">
+                <li class="ms-3"><a class="text-primary" href="./formulario.html">Contacto<svg class="bi" width="24"
+                            height="24">
                             <use xlink:href="#twitter" />
                         </svg></a></li>
-                <li class="ms-3"><a class="text-primary" href="./FAQ.html">Preguntas Frecuentes<svg class="bi" width="24"
-                            height="24">
+                <li class="ms-3"><a class="text-primary" href="./FAQ.html">Preguntas Frecuentes<svg class="bi"
+                            width="24" height="24">
                             <use xlink:href="#facebook" />
                         </svg></a></li>
             </ul>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
         <script src="./javascript/faq.js"></script>
 </body>
 

@@ -36,6 +36,8 @@ btn.addEventListener('click', function () {
         sessionStorage.setItem('mode', newMode);
     }
 });
+
+
 //dato valor del prestamo
 let PrestamoEnForm = localStorage.getItem("Prestamo");
 document.getElementById("myText").defaultValue = `El credito que usted ha pedido tiene un costo final de $ ${PrestamoEnForm}`;
