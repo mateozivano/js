@@ -10,15 +10,12 @@ btn1.addEventListener("click", function(){
   document.getElementById("costo_total").value = parseFloat(cantidad) + parseFloat(interesTotal);
   console.log(interesTotal)
 
-  //json
-    let var1 = {
-        "cantidad": document.getElementById("cantidad").value,
-        "interes": document.getElementById("interes").value,
-        "interesTotal": document.getElementById("interes_total").value,
-        "costoTotal": document.getElementById("costo_total").value};
-    console.log(var1)
-    let strVar1 = JSON.stringify(var1)
-    localStorage.setItem("calculo", strVar1);
+  let PrestamoAPagar = document.getElementById("costo_total").value;
+  console.log(PrestamoAPagar);
+  localStorage.setItem("Prestamo", PrestamoAPagar)
+
+  
+    
     
 })
 
@@ -75,19 +72,7 @@ btn.addEventListener('click', function () {
     }
 });
 
-//json
-/*
-let btn2 = document.getElementById("btn2");
-let json = localStorage.getItem("calculo")
-console.log(typeof json);
-console.log(json)
-let nro = (json.interesTotal);
-console.log(json.interesTotal);
-btn2.addEventListener("click", function() {
-    alert("cantidad deseada:", json.cantidad)
-    
-})
-*/
+
 
 //sweetalert
 
@@ -98,3 +83,6 @@ Swal.fire({
     confirmButtonColor: '#3085d6',
     confirmButtonText: 'Ok!'
   })
+
+  //implemento promesas/fetch
+
