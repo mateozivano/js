@@ -48,11 +48,11 @@
         <h2>Bienvenido a nuestro formulario. Por favor, ingrese su email.</h2>
         <form class="col-md-12" id="contact-form">
             <div><input class="col-md-2" type="hidden" name="contact_number">
-                <label>Name</label>
+                <label>Nombre</label>
                 <input class="col-md-2" type="text" name="user_name">
                 <label>Email</label>
                 <input class="col-md-2" type="email" name="user_email">
-                <div><label>Message</label>
+                <div><label>Mensaje(Será enviado a su casilla de correo)</label>
                     <textarea class="col-md-12" id="myText" name="message"></textarea>
                 </div>
                 <button class="col-md-2 btn bg-light" id="enviar_boton" type="submit" value="Send">enviar</button>
@@ -102,34 +102,7 @@
     <script src="./javascript/sweetalert2.all.min.js"></script>
     <script src="./javascript/form.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-
-            emailjs.init('b8tKZe3g5cq3fAMzH');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                this.contact_number.value = Math.random() * 100000 | 0;
-
-                emailjs.sendForm('service_wbj0whp', 'contact_form', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                        sessionStorage.removeItem("mail", "error")
-                    }, function (error) {
-                        sessionStorage.removeItem("mail", "error")
-                        console.log('FAILED...', error);
-
-                        sessionStorage.setItem("mail", "error")
-                    },
-                    );
-
-            });
-        }
-    </script>
+   
 </body>
 
 </html>

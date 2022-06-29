@@ -37,6 +37,35 @@ btn.addEventListener('click', function () {
     }
 });
 
+//emailjs
+
+
+
+window.onload = function () {
+    emailjs.init('b8tKZe3g5cq3fAMzH');
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        this.contact_number.value = Math.random() * 100000 | 0;
+
+        emailjs.sendForm('service_wbj0whp', 'contact_form', this)
+            .then(function () {
+                console.log('SUCCESS!');
+                sessionStorage.removeItem("mail", "error")
+            }, function (error) {
+                sessionStorage.removeItem("mail", "error")
+                console.log('FAILED...', error);
+
+                sessionStorage.setItem("mail", "error")
+            },
+            );
+
+    });
+}
+
+
+
+
 
 //dato valor del prestamo
 let PrestamoEnForm = localStorage.getItem("Prestamo");
